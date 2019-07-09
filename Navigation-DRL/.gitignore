@@ -3,14 +3,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-*.py~
-*.npy
-*.npz
-*.pdf
-*.pt
-*.pkl
-*.idea/*
-
 # C extensions
 *.so
 
@@ -104,9 +96,10 @@ venv.bak/
 
 # Rope project settings
 .ropeproject
+*~
 
 # mkdocs documentation
 /site
 
-# mypy
-.mypy_cache/
+trained_models/
+.fuse_hidden*

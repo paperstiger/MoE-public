@@ -1,0 +1,13 @@
+Env:IndoorRangeGoal-from-x=(0.10-0.40)-y=(0.60-0.90)-to-(0.80-0.80)-(0.30-0.70)
+Succeed: 23
+Collision: 21
+Env:IndoorSensorSingleGoalNoCollision-from-x=(0.10-0.90)-y=(0.10-0.90)-to-0.80-0.80
+Env:IndoorSensorSingleGoalNoCollision-from-x=(0.10-0.90)-y=(0.10-0.90)-to-0.80-0.80
+Succeed: 747
+Collision: 7
+Env:IndoorSensorRangeGoal-from-x=(0.10-0.90)-y=(0.10-0.90)-to-(0.10-0.90)-(0.10-0.90)
+Succeed: 5
+Collision: 133
+Env:IndoorSensorRangeGoalNoCollision-from-x=(0.10-0.40)-y=(0.60-0.90)-to-(0.10-0.40)-(0.60-0.90)
+Succeed: 85
+Collision: 67
