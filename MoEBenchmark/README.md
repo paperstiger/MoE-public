@@ -1,8 +1,18 @@
-# Study-All
+# Benchmark on MoE
 
-In this folder, I will systematically study all the problems I have in the same framework.
+In this folder, I test MoE on a list of benchmark problems.
+In order to run the code, you have to first download the dataset from [google drive](https://drive.google.com/open?id=1ZyI8RWbgd4CQPJqpQdXXxSUeY_OZjlgY) and unzip into folder *data*.
 
-I will let those data being where they were.
+To visualize the dataset, you have to use command
+```python
+python show_dataset.py -pcakmean -problem -choice
+```
+where problem can be chosen from pen, car, drone, dtwo and these four arguments are used throughout this project to select benchmark problems.
+The other option choice can be chosen from umap and drawpca which specifies to use umap or PCA to visualize dataset.
+
+To train MoE, simply use function inside train_models.py you can specify benchmark problem in a similar way. See the file for other program options.
+
+To evaluate MoE, run file eval_models.py where you will find detailed description of program arguments.
 
 # data visualization
 

@@ -27,7 +27,7 @@ import datanames
 
 def get_args(*args):
     """Get arguments for a problem, there are some default arguments"""
-    return getArgs('pen', 'car', 'drone', 'dtwo', 'kmean', 'pcakmean', *args)
+    return getArgs('pen', 'car', 'drone', 'dtwo', 'done', 'kmean', 'pcakmean', *args)
 
 
 def get_label_cfg_by_args(args):
