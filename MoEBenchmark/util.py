@@ -27,7 +27,7 @@ import datanames
 
 def get_args(*args):
     """Get arguments for a problem, there are some default arguments"""
-    return getArgs('pen', 'car', 'drone', 'dtwo', 'done', 'kmean', 'pcakmean', *args)
+    return getArgs('pen', 'car', 'drone', 'dtwo', 'kmean', 'pcakmean', *args)
 
 
 def get_label_cfg_by_args(args):
@@ -39,8 +39,6 @@ def get_label_cfg_by_args(args):
         cfg = datanames.DRONE
     elif args.dtwo:
         cfg = datanames.DRONETWO
-    elif args.done:
-        cfg = datanames.DRONEONE
     else:
         print('You must choose from existing datasets')
         raise SystemExit
@@ -103,7 +101,10 @@ def get_vio_dst_fun(cfg):
     """Return the constraint violation function."""
     mode = cfg['uniqueid']
     sys.path.insert(0, cfg['script_path'])
-    import libserver
+    try:
+        import libserver
+    except:
+        print('Oops, cannot import libserver, it has to be compiled')
     if mode == 'pen':
         libserver.init(cfg['cfg_path'])
         def dst_fun(x0, y0, x1, y1):
@@ -146,7 +147,10 @@ def get_xy_vio_fun(cfg):
     """Return a function that evaluates constraint violation for one example."""
     mode = cfg['uniqueid']
     sys.path.insert(0, cfg['script_path'])
-    import libserver
+    try:
+        import libserver
+    except:
+        print('Oops, cannot import libserver, it has to be compiled')
     if mode == 'pen':
         libserver.init(cfg['cfg_path'])
         def vio_fun(x, y):
@@ -235,7 +239,3 @@ def drone_eval_pred_vio(obs, pred):
         if constrvio < worst_vio:
             worst_vio = constrvio
     return worst_vio
-
-
-if __name__ == '__main__':
-    main()

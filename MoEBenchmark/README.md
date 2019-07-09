@@ -63,7 +63,3 @@ Yes, utility functions, as the name reveals.
 ## datanames.py
 
 Record the data file for a few problem.
-
-## delete_models.py
-
-Some times you generate new models without removing old files.
